@@ -180,8 +180,8 @@ The official home of packMP3:
  http://packjpg.encode.ru
  
 For questions and bug reports:
- packjpg (at) htw-aalen.de
+ packjpg (at) matthiasstirner.com
 
 
 ____________________________________
-packMP3 by Matthias Stirner, 11/2014
+packMP3 by Matthias Stirner, 01/2016
