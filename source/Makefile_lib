@@ -1,0 +1,23 @@
+# Project: packMP3 static library
+# Makefile created by Matthias Stirner 01/30/2012
+# Working with GCC 4.6.0
+
+CC      = gcc
+CPP     = g++
+AR      = ar
+RM      = del
+CFLAGS  = -I. -DBUILD_LIB -O2 -Wall -pedantic -fsched-spec-load -fomit-frame-pointer
+LDFLAGS = -fvisibility=hidden -static-libgcc -static-libstdc++
+DEPS    = aricoder.h bitops.h huffmp3.h huffmp3tbl.h pmp3tbl.h pmp3bitlen.h Makefile
+OBJ     = aricoder.o bitops.o huffmp3.o packmp3.o
+BIN     = packMP3lib.a
+
+%.o: %.cpp $(DEPS)
+	$(CPP) -c -o $@ $< $(CFLAGS)
+
+$(BIN): $(OBJ)
+	ar r $(BIN) $(OBJ)
+	ranlib $(BIN)
+
+clean:
+	$(RM) *.o
