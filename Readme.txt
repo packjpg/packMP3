@@ -1,4 +1,4 @@
-packMP3 v1.0f (11/21/2014)
+packMP3 v1.0g (01/22/2016)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 packMP3 is a compression program specially designed for further 
@@ -150,6 +150,10 @@ v1.0e (01/15/14) (public)
 v1.0f (11/21/14) (public)
  - packMP3 licensing changed to LGPL v3
  - some minor bugfixes
+ 
+v1.0g (01/22/16) (public)
+ - Updated contact info
+ - fixed a minor bug
 
  
 Acknowledgements
