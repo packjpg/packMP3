@@ -193,16 +193,16 @@ INTERN int lib_out_type = -1;
 	----------------------------------------------- */
 
 INTERN mp3Frame*      firstframe		=	NULL;	// first physical frame
-INTERN mp3Frame*      lastframe		=	NULL;	// last physical frame
-INTERN unsigned char* main_data		=	NULL;	// (mainly) huffman coded data
+INTERN mp3Frame*      lastframe			=	NULL;	// last physical frame
+INTERN unsigned char* main_data			=	NULL;	// (mainly) huffman coded data
 INTERN unsigned char* data_before		=	NULL;	// data before (should be ID3v2 tag)
 INTERN unsigned char* data_after		=	NULL;	// data after (should be ID3v1 or ID3v2 tag)
 INTERN unsigned char* unmute_data		=	NULL;	// fix data (to reverse muted frames)
 INTERN int            main_data_size	=     0 ;	// size of main data
-INTERN int            data_before_size =     0 ;	// size of data before
-INTERN int            data_after_size  =     0 ;   // size of data after
-INTERN int            unmute_data_size =     0 ;   // size of fix data
-INTERN int            n_bad_first      =     0 ;   // # of bad first frames (should be zero!)
+INTERN int            data_before_size	=     0 ;	// size of data before
+INTERN int            data_after_size	=     0 ;   // size of data after
+INTERN int            unmute_data_size	=     0 ;   // size of fix data
+INTERN int            n_bad_first		=     0 ;   // # of bad first frames (should be zero!)
 INTERN unsigned char* gg_context[2]	= {NULL};	// universal context based on global gain
 
 /* -----------------------------------------------
