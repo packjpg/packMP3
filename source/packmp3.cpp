@@ -2559,14 +2559,7 @@ INTERN inline bool mp3_mute_frame( mp3Frame* frame )
 	
 	// mute frame - this has to be done in order
 	// we assume that all previous frames are muted, too!
-	if ( frame->prev != NULL ) {
-		// make some room, use prev frame aux too!
-		frame->bit_reservoir += frame->prev->aux_size;
-		if ( frame->bit_reservoir >= 512 ) {
-			frame->prev->aux_size = frame->bit_reservoir - 511;
-			frame->bit_reservoir = 511;
-		} else frame->prev->aux_size = 0;
-	} else frame->bit_reservoir = 0;
+	frame->bit_reservoir = 0;
 	frame->aux_size = frame->frame_size - frame->fixed_size + frame->bit_reservoir;
 	if ( frame->next != NULL ) frame->aux_size -= frame->next->bit_reservoir;
 	frame->main_size = 0;
