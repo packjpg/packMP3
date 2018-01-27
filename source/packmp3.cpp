@@ -2561,7 +2561,7 @@ INTERN inline bool mp3_mute_frame( mp3Frame* frame )
 	// we assume that all previous frames are muted, too!
 	// move aux data around the bit reservoirs only for files that already provide a
 	// bit reservoir. the decoder depends on this.
-	if ( frame->prev != NULL && i_bit_res != 0) {
+	if ( frame->prev != NULL && i_bit_res != 0 ) {
 		// make some room, use prev frame aux too!
 		frame->bit_reservoir += frame->prev->aux_size;
 		if ( frame->bit_reservoir >= 512 ) {
